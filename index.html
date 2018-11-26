@@ -17,6 +17,30 @@
         margin-right: auto;
         }
     </style>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+          google.charts.load("current", {packages:["corechart"]});
+          google.charts.setOnLoadCallback(drawChart);
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Task', 'Hours per Day'],
+              ['Work',     11],
+              ['Eat',      2],
+              ['Commute',  2],
+              ['Watch TV', 2],
+              ['Sleep',    7]
+            ]);
+    
+            var options = {
+              title: 'My Daily Activities',
+              is3D: true,
+            };
+    
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+          }
+        </script>
+    
 </head>
 <body>
     <img src="loy_katonggg.jpg">
@@ -91,5 +115,8 @@
   <p>  อีเมล์   me_thanatcha08@hotmail.com</p>
   <p>  E-mail : me_thanatcha08@hotmail.com</p>
   <p>  นิสัยส่วนตัว ทะเล้น ขี้เล่นกับคนสนิท เป็นคนพูดตรง</p>
+
+  <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+
 </body>
 </html>
