@@ -1,95 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
 
-    <title>Document</title>
-    <style>
-        .mar {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        }
-    </style>
+        var options = {
+          title: 'My Daily Activities',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
 </head>
 <body>
-    <img src="loy_katonggg.jpg">
-
-    <div class="container">
-    <br>
-    <h4> ข่าวสาร </h4>
-        <div class="row">
-            <div class="sm-12 col-lg-12" >
-                <div class="mar" >
-                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <a href="https://goo.gl/dHjujH" target="_blank"><img class="d-block w-100" src="images/comcamp17.jpg" alt="First slide"></a>
-                                </div>
-                                <div class="carousel-item">
-                                    <a href="https://goo.gl/dHjujH" target="_blank"><img class="d-block w-100" src="images/cc2.jpg" alt="Second slide"></a>
-                                </div>
-                                <div class="carousel-item">
-                                    <a href="https://drive.google.com/file/d/1belFcRGdtsc3Da7sFtL4RdXQcFIJO1Lq/view?fbclid=IwAR2gOh48Zok-F6ZbmTGA7fb85fXbovI9cJUx7S-FjGBbZOGBNqz83Qphf9s" target="_blank"><img class="d-block w-100" src="images/click.png" alt="Third slide"></a>
-                                </div>
-                                </div>
-                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                                </a>
-                        </div>
-                </div>
-            </div>
-            <div class="sm-12 col-lg-12" ><br>
-                <h5 style="margin-left:2em">เปิดรับสมัครแล้ว 💻 ค่ายยุวชนคอมพิวเตอร์ 💻 Comcamp17th <br></h5>
-                    <h5><font size="4">  เริ่มรับสมัครน้องๆระดับมัธยมปลายและ ปวช. เข้าร่วมค่ายกับเรา4วัน3คืนระหว่างวันที่ 23-26 มกราคม 2562
-                    @มหาวิทยาลัยแม่โจ้ ค่าลงทะเบียนเพียงคนละ 1,000 บาท( รวมค่าที่พัก 3 คืน ค่าเอกสาร ค่าอาหาร ค่าเบรค ค่าเสื้อค่าย)
-                    คุ้มมากๆ น้องๆค่ายจะได้เรียนรู้ปฏิบัติจริงเกี่ยวกับ IOT & Innovation และกิจกรรมสนุกๆ
-                    นอกนั้นนั้นยังมีสิทธิ์ได้รับโควตาเข้าศึกษาต่อสาขาวิชาวิทยาการคอมพิวเตอร์ ปีการศึกษา2562
-                    มาร่วมค่ายกันเยอะๆนะ รับสมัครถึงวันที่ 10 ธค 61 แล้วพบกันนะ
-                    </font></h5>
-            </div>
-        </div>z
-
-    </div>
-
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4298.819764169817!2d99.01078737397796!3d18.898451122458482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da2334d4ce0385%3A0xf0346c6d9b330f0!2z4Lih4Lir4Liy4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii4LmB4Lih4LmI4LmC4LiI4LmJ!5e0!3m2!1sth!2sth!4v1543139273633" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-    <iframe width="560" height="315"
-    src="https://www.youtube.com/embed/qRDjT0DXVuc"
-    frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen></iframe>
-
-    <p>ชื่อ นางสาว ธนัชชา คล่องแคล่ว</p>
-    <p>Name : Miss. Thanatcha Klongklaew</p>
-     <p>ชื่อเล่น มิ้นต์</p>
-    <p>Nickname: Mint</p>
-  <p>  วันเกิด เกิดวัน อาทิตย์ ที่ 8 เดือน กันยายน พ.ศ. 2539 อายุ 16 ปี</p>
-  <p>  Birthday : Sunday, 8th  September 1996</p>
-  <p>  สถานที่เกิด โรงพยาบาลจุฬาลงกรณ์ จังหวัดกรุงเทพมหานคร</p>
-  <p>  Birthday’s Place : Chulalongkorn Hospital , Bangkok</p>
-  <p>  กรุ๊ปเลือด โอ</p>
-  <p>  Blood’s Group : O</p>
-  <p>  ที่อยู่ ปัจจุบันอยู่บ้านเลขที่ 23/2  หมู่ที่ 14 ตำบลในเมือง  อำเภอเมืองชัยภูมิ</p>
-  <p>  จังหวัดชัยภูมิ รหัสไปรษณีย์ 36000</p>
-  <p>  My place : 23/2 Moo.14 Tumbon.Nhaimuang Ampher.Muang Chaiyaphum 36000</p>
-  <p>  การศึกษา กำลังศึกษาอยู่ที่โรงเรียนสตรีชัยภูมิ ชั้นม.4</p>
-  <p>  Education’s Background : Studying A Satrichaiyaphum</p>
-  <p>  ติดต่อ Line: m_mmtk อินสตาแกรม Natcham_m</p>
-  <p>  Contract Line: m_mmtk , Instagram >> Natcham_m</p>
-  <p>  อีเมล์   me_thanatcha08@hotmail.com</p>
-  <p>  E-mail : me_thanatcha08@hotmail.com</p>
-  <p>  นิสัยส่วนตัว ทะเล้น ขี้เล่นกับคนสนิท เป็นคนพูดตรง</p>
+    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
 </body>
 </html>
